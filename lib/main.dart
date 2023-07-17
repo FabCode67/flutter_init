@@ -1,38 +1,18 @@
 import 'package:flutter/material.dart';
+import 'pages/login_page.dart';
 
-void main() => runApp(MaterialApp(
-  home: Scaffold(
-    appBar: AppBar(
-      title: Text('My First App'),
-      centerTitle: true,
-      backgroundColor: Colors.lightGreen,
-    ),
-    body: Center(
-      child: Text(
-        'Hello Fab',
-            style: TextStyle(
-          fontSize: 20.0,
-        fontWeight: FontWeight.bold,
-              letterSpacing: 2.0,
-              color: Colors.black38,
-      ),
-      ),
-    ),
-    floatingActionButton: FloatingActionButton(
-      child: Text('Click'),
-      backgroundColor: Colors.lightGreen,
-      onPressed: () {
-        print('button clicked');
-      },
-    ),
-  ),
-));
+void main() {
+  runApp(const MyApp());
+}
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: LoginPage(),
+    );
   }
 }
